@@ -1,0 +1,10 @@
+# Ignore environment files
+.env
+
+# Ignore Google API secrets
+client_secret_*.json
+
+# Ignore Composer dependencies (optional if you don’t want vendor in repo)
+/vendor/
+
+
