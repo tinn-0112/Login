@@ -71,6 +71,11 @@ if (isset($_POST['credential'])) {
     }
 }
 
+if (isset($_GET['reset']) && $_GET['reset'] === 'success'): ?>
+    <div class="alert alert-success fixed-message">
+        Password reset successful! Please log in.
+    </div>
+<?php endif;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email    = $_POST['email'];
@@ -167,6 +172,14 @@ body {
       border-radius: 8px !important;
       box-shadow: 0 2px 6px rgba(223, 202, 202, 0.1);
     }
+    .fixed-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    min-width: 250px;
+    z-index: 9999;
+}
+    
 </style>
 <body class="bg-light d-flex justify-content-center align-items-center vh-100">
 
@@ -193,8 +206,17 @@ body {
                 </label>
             </div>
 
+                <div class="d-flex justify-content-center mb-3">
+        <div class="g-recaptcha" data-sitekey="6LdJA50sAAAAAH66PGOfAnwuhDo6XMFOUNO-XDoz" data-theme="dark"></div>
+    </div>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
             <button type="submit" class="btn btn-outline-secondary w-100">Login</button>
         </form>
+        <!-- Forgot Password link -->
+        <div class="mt-3 text-center">
+            <a href="forgotpassword.php">Forgot your password?</a>
+        </div>
+
         <div class="text-center mt-3">
             <small>Don’t have an account? <a href="signup.php">Sign up here</a></small>
         </div>
@@ -227,6 +249,11 @@ body {
             // Toggle button text
             this.textContent = type === "password" ? "Show" : "Hide";
         });
+
+         setTimeout(() => {
+        const msg = document.querySelector('.fixed-message');
+        if (msg) msg.style.display = 'none';
+    }, 4000); // hides after 4 seconds
     </script>
 
 </body>
