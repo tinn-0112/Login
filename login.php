@@ -205,13 +205,10 @@ body {
                     Remember Me
                 </label>
             </div>
-
-                <div class="d-flex justify-content-center mb-3">
-        <div class="g-recaptcha" data-sitekey="6LdJA50sAAAAAH66PGOfAnwuhDo6XMFOUNO-XDoz" data-theme="dark"></div>
-    </div>
-            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        
             <button type="submit" class="btn btn-outline-secondary w-100">Login</button>
         </form>
+
         <!-- Forgot Password link -->
         <div class="mt-3 text-center">
             <a href="forgotpassword.php">Forgot your password?</a>

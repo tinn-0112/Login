@@ -163,7 +163,11 @@ body {
           <input type="password" name="confirm_password" class="form-control" required>
         </div>
       </div>
-
+        <!--Recaptcha-->
+          <div class="d-flex justify-content-center mb-3">
+        <div class="g-recaptcha" data-sitekey="6Lf2t7EsAAAAAHw_9C-rg3HOCCXEzwm3-T3xT-2O"></div>
+    </div>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       <!-- Actions -->
       <button type="submit" class="btn btn-primary w-100">Sign Up</button>
       <p class="text-center mt-3">
