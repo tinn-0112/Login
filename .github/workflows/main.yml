@@ -18,4 +18,4 @@ jobs:
           server: ftpupload.net
           username: ezyro_41652401   # your ProFreeHost FTP username
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./            # repo root goes into /htdocs
+          local-dir: ./htdocs         # repo root goes into /htdocs
