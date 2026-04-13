@@ -16,6 +16,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.0
         with:
           server: ftpupload.net
-          username: epiz_12345678   # your ProFreeHost FTP username
+          username: ezyro_41652401   # your ProFreeHost FTP username
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./            # repo root goes into /htdocs
